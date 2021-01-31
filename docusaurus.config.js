@@ -78,6 +78,16 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Beingana Jim Junior. Built with Docusaurus.`,
     },
+    googleAnalytics: {
+      trackingID: 'G-FCQBP5VVFJ',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
+    gtag: {
+      trackingID: 'G-FCQBP5VVFJ',
+      // Optional fields.
+      anonymizeIP: true, // Should IPs be anonymized?
+    },
   },
   
   presets: [
@@ -134,7 +144,7 @@ module.exports = {
       '@docusaurus/plugin-pwa',
       {
         debug: false,
-        offlineModeActivationStrategies: ['appInstalled','mobile','saveData','queryString','always'],
+        offlineModeActivationStrategies: ['always'],
         pwaHead: [
           {
             tagName: 'link',
@@ -185,5 +195,6 @@ module.exports = {
         trailingSlash: false,
       },
     ],
+    '@docusaurus/plugin-google-analytics'
   ],
 };
