@@ -1,0 +1,54 @@
+---
+id: videocomponent
+title: Video Component
+sidebar_label: Video Component
+slug: /api/video-component
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Image Component. The Reactjs Media documentation.
+keywords:
+    - Image component
+    - reactjs media
+    - reactjs media Component API
+    - reactjs media documentation
+    - Image
+image: https://i.imgur.com/mErPwqL.png
+---
+
+import { ReactVideo } from "reactjs-media";
+
+## Usage
+
+To use the video componentyou have to import it and use it.
+
+### Code
+
+```jsx
+import React from "react";
+import { ReactVideo } from "reactjs-media";
+
+const App = () => {
+	return (
+		<div>
+			<ReactVideo src="/video.mp4" poster="poster.jpg" type="video/mp4" />
+		</div>
+	);
+};
+
+export default App;
+```
+
+### Output
+
+<ReactVideo
+	src="/video.mp4"
+	poster="/uganda-smoke-flag-isolated-black-background-199119742.jpg"
+	type="video/mp4"
+/>
+
+To find more about props check the Video [Props section](videoprop.mdx).
+
+:::tip
+The new video component has been given a custom context menu to prevent users from altering teh UI
+
+:::

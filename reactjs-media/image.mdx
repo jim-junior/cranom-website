@@ -1,0 +1,65 @@
+---
+id: image
+title: Image
+sidebar_label: Image
+slug: /components/image
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Image Component. The Reactjs Media documentation.
+    - Image component
+    - reactjs media
+    - reactjs media docs
+    - reactjs media documentation
+    - Image
+image: https://i.imgur.com/mErPwqL.png
+---
+
+## Image Component
+
+The Image component is used to create responsive images the are also help in page loading since the are optimized and implement lazy loading and are asyncromous. This means all necessary page data can be archived easily.
+It is actually the component that can be customized more so you can change the component settings.
+
+## Usage
+
+To use the image component you haveto import it r=from the `reactjs-media` module as `Image`
+
+**Example**
+
+```jsx live
+import React from "react";
+import { Image } from "reactjs-media";
+
+const MyImage = () => {
+	return (
+		<>
+			<Image
+				src="/image.jpg"
+				//you can pass in other props
+			/>
+		</>
+	);
+};
+```
+
+```jsx live
+function Clock(props) {
+	const [date, setDate] = useState(new Date());
+	useEffect(() => {
+		var timerID = setInterval(() => tick(), 1000);
+
+		return function cleanup() {
+			clearInterval(timerID);
+		};
+	});
+
+	function tick() {
+		setDate(new Date());
+	}
+
+	return (
+		<div>
+			<h2>It is {date.toLocaleTimeString()}.</h2>
+		</div>
+	);
+}
+```

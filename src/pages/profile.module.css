@@ -1,0 +1,12 @@
+.pi {
+	border-radius: 50%;
+	max-width: 300px;
+	text-align: center;
+}
+.mmm {
+	margin: auto;
+	width: fit-content;
+}
+.container {
+	text-align: center;
+}

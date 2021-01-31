@@ -1,0 +1,46 @@
+/* stylelint-disable docusaurus/copyright-header */
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+	--ifm-color-primary: #3578e5;
+	--ifm-color-primary-dark: #1d68e1;
+	--ifm-color-primary-darker: #1b62d4;
+	--ifm-color-primary-darkest: #1751af;
+	--ifm-color-primary-light: #4e89e8;
+	--ifm-color-primary-lighter: #5a91ea;
+	--ifm-color-primary-lightest: #80aaef;
+	--ifm-code-font-size: 95%;
+}
+html[data-theme="dark"] {
+	--ifm-color-primary: #02ecec;
+	--ifm-color-primary-dark: #02d4d4;
+	--ifm-color-primary-darker: #02c9c9;
+	--ifm-color-primary-darkest: #01a5a5;
+	--ifm-color-primary-light: #09fdfd;
+	--ifm-color-primary-lighter: #15fdfd;
+	--ifm-color-primary-lightest: #38fdfd;
+}
+body {
+	font-family: "Roboto", sans-serif;
+}
+.menu_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar- {
+	scrollbar-width: thin;
+}
+.docusaurus-highlight-code-line {
+	background-color: rgb(72, 77, 91);
+	display: block;
+	margin: 0 calc(-1 * var(--ifm-pre-padding));
+	padding: 0 var(--ifm-pre-padding);
+}
+.tableOfContents_node_modules-\@docusaurus-theme-classic-lib-next-theme-TOC- {
+	scrollbar-width: thin;
+}
+*::selection {
+	background-color: aqua;
+}

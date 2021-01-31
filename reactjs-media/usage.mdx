@@ -1,0 +1,47 @@
+---
+id: usage
+title: Usage
+sidebar_label: Usage
+slug: /usage
+hide_title: true
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: The Reactjs Media documentation. Usage
+keywords:
+    - reactjs-media
+    - reactjs media Usage
+    - reactjs media docs
+    - reactjs media documentation
+    - reactjs video player
+image: https://i.imgur.com/mErPwqL.png
+---
+
+## Usage
+
+The packages exports all its compenents and has no default export. To use reactjs media your have to import the required component. The available components are:
+
+-   ReactVideo (The default video player)
+-   ReactAudio (The default audio player)
+-   YoutubePlayer (The Youtube Player)
+-   Image (The Image component)
+
+### Example code
+
+```jsx
+import React from "react";
+import { ReactVideo } from "reactjs-media";
+
+const App = () => {
+	return (
+		<div>
+			<ReactVideo
+				src="https://www.example.com/video.mp4"
+				poster="/poster.jpg"
+			/>
+		</div>
+	);
+};
+
+export default App;
+```
+
+if your want to learn more about what props you can pass in you will have to go to the documentation section to learn more.

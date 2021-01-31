@@ -1,0 +1,77 @@
+---
+id: youtube
+title: Youtube Player
+sidebar_label: Youtube Player
+slug: /components/youtube-player
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: Youtube Player. The Reactjs Media documentation.
+    - Youtube Player
+    - reactjs media
+    - reactjs media docs
+    - reactjs media documentation
+    - reactjs audio player
+image: https://i.imgur.com/mErPwqL.png
+---
+
+## Youtube Player
+
+:::warning
+
+This is an experimental feature.
+
+:::
+
+The react audio player is a component for native audio players but it is optimized to look the same in all browsers and have a great UI and is highly customized.
+It consumes both the native browser event DOM api and the react event API making it fast.
+
+## Usage
+
+To use the react Youtube player component you have to import it from the `reactjs-media` module as `YoutubePlayer`
+
+**Example**
+
+```jsx
+import React from "react";
+import { YoutubePlayer } from "reactjs-media";
+
+const MyVideo = () => {
+	return (
+		<>
+			<ReactAudio
+				src="https://youtu.be/UZCO5k1Nu70"
+				width={650}
+				height={600}
+				//you can pass in other props
+			/>
+		</>
+	);
+};
+```
+
+## Props
+
+List of the available props:
+
+> **Note:** Since this is an experimental feature we recommend right clicking on the video inorder to get the video url instead of copying from the browser address bar. Both work but there are some issuses incase of page reloads.
+
+| Prop              | Type                       | Description                                              |
+| ----------------- | -------------------------- | -------------------------------------------------------- |
+| `src`             | string: **Required**       | This represents the url of the video                     |
+| `title`           | string: Optional           | This is needed to prevent iframe warning in the terminal |
+| `allowFullScreen` | Boolean: Optional          | This will enable the fullsscreen button on the player    |
+| `className`       | string: Optional           | The can be placed incase you want to use it              |
+| `height`          | string or number: Optional | The max height of the player                             |
+| `width`           | string or number: Optional | The max width of the player                              |
+
+:::important
+
+Youtube player is only available in version `1.2.0` above if you want to use it then upgrade.
+
+:::
+
+:::tip
+
+In version `1.3.x` we plan to improve the youtube player component and add a facebook and other players. If you are willing you can contribute to the projects on [Github](https://guthub.com/jim-junior/reactjs-media "Contribute")
+
+:::

@@ -1,0 +1,56 @@
+---
+id: yotubep
+title: Youtube Player Props
+sidebar_label: Youtube Player Props
+slug: /api/youtube-player-props
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Image Component. The Reactjs Media documentation.
+keywords:
+    - Youtube player component
+    - reactjs media
+    - reactjs media Component API
+    - reactjs media documentation
+    - react Youtube player
+image: https://i.imgur.com/mErPwqL.png
+---
+
+> The `YoutubePlayer` component has a few props due to the fact that is is still an experimental feature. In case you wish, you can contribute to its development on [Github](https://guthub.com/jim-junior/reactjs-media "Contribute")
+
+## Props
+
+### `src`
+
+The `src` prop specifies the url of the video. You should note that it is that required prop so incase you don't include it this might cause errors.
+
+```jsx {5}
+const App = () => {
+	return (
+		<div>
+			<YoutubePlayer
+				src="https://youtu.be/UZCO5k1Nu70" // Reqiured
+			/>
+		</div>
+	);
+};
+
+export default App;
+```
+
+:::note
+
+Since this is an experimental feature we recommend right clicking on the video inorder to get the video url instead of copying from the browser address bar. Both work but there are some issuses incase of page reloads.
+
+:::
+
+### `allowFullScreen`
+
+This is the prop that decides if the fullscreen button will be enabled on the youtube player.
+
+### `width`
+
+This is the `max-width` of the iframe youtebe player
+
+### `height`
+
+This is the height of the iframe youtebe player

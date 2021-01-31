@@ -1,0 +1,55 @@
+---
+id: yotubec
+title: Youtube Player Component
+sidebar_label: Youtube Player
+slug: /api/youtube-player
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Image Component. The Reactjs Media documentation.
+keywords:
+    - Image component
+    - reactjs media
+    - reactjs media Component API
+    - reactjs media documentation
+    - Image
+image: https://i.imgur.com/mErPwqL.png
+---
+
+import { YoutubePlayer } from "reactjs-media";
+
+## Usage
+
+To use the video componentyou have to import it and use it.
+
+### Code
+
+```jsx
+import React from "react";
+import { YoutubePlayer } from "reactjs-media";
+
+const App = () => {
+	return (
+		<div>
+			<YoutubePlayer
+				src="https://youtu.be/UZCO5k1Nu70" // Reqiured
+				allowFullScreen
+				height={500}
+				width={600}
+			/>
+		</div>
+	);
+};
+
+export default App;
+```
+
+### Output
+
+<YoutubePlayer
+	src="https://youtu.be/UZCO5k1Nu70"
+	allowFullScreen
+	height={500}
+	width={600}
+/>
+
+To find more about props check the `YoutubePlayer` [Props section](youtubep.mdx).

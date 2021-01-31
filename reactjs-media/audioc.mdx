@@ -1,0 +1,115 @@
+---
+id: audioc
+title: Audio Player
+sidebar_label: Audio Player
+slug: /api/audio-player
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Image Component. The Reactjs Media documentation.
+keywords:
+    - Image component
+    - reactjs media
+    - reactjs media Component API
+    - reactjs media documentation
+    - Image
+image: https://i.imgur.com/mErPwqL.png
+---
+
+import { ReactAudio } from "reactjs-media";
+
+## Usage
+
+To use the video componentyou have to import it and use it.
+
+### Code
+
+```jsx
+import React from "react";
+import { ReactVideo } from "reactjs-media";
+
+const App = () => {
+	return (
+		<div>
+			<ReactAudio src="/video.mp4" />
+		</div>
+	);
+};
+
+export default App;
+```
+
+### Output
+
+<ReactAudio src="/video.mp4" />
+
+To find more about props check the Audio Props section.
+
+## Props
+
+### `type`
+
+This represents the type of the video it usally defaults to `video/mp4`. the values expexted is a string.
+
+### `onTimeUpdate`
+
+This props is also passed down in form of a fuction. The function that your pass in will recieve three arguments and these are:
+
+-   #### event
+
+This is a native browser event that is usally triggered each time the video time updates. It is the first argument you will receive
+
+-   #### currentTime
+
+This is a the current time that the video playback has reached.
+
+-   #### duration
+
+This is the full video duration. This is anded in just because we thought it was necessary.
+
+```jsx {10}
+const Video = () => {
+    function onTimeUpdateProp(event, currentTime, duration) {
+        // some logic is place here
+    }
+
+	return <div>
+        <ReactVideo
+        src="/Learn useCallback In 8 Minutes.mp4"
+        ....
+        onTimeUpdate={onTimeUpdateProp}
+    />
+    <div>;
+};
+```
+
+### `onRewind`
+
+This is fired when the user hit the forward button
+
+### `onFoward`
+
+This is fired when the user hit the forward button
+
+### `onSeek`
+
+This is fired when the user seeks a certain point on the audio
+
+### `onMute`
+
+This is fired when the volume of the player is muted
+
+### `onPause`
+
+This is fired when the audio pauses
+
+### `onPlay`
+
+This is fired when the audio plays
+
+### `autoPlay`
+
+This props tells the audio that it should play imediately when the page loads
+
+### `className`
+
+This will be the `class` of the player

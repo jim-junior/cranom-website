@@ -1,0 +1,108 @@
+/* stylelint-disable docusaurus/copyright-header */
+
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+	padding: 4rem 0;
+	text-align: center;
+	position: relative;
+	overflow: hidden;
+	background: linear-gradient(to right, #3578e5, #3578e500),
+		url("/img/undraw_developer_activity_bv83.svg");
+	background-position: right;
+}
+
+@media screen and (max-width: 966px) {
+	.heroBanner {
+		padding: 2rem;
+	}
+	.side {
+		font-size: 2rem;
+		text-align: center;
+	}
+	.explore {
+		font-size: 1rem;
+	}
+	.words > h3 {
+		font-size: 1.5rem;
+	}
+	.words > p {
+		font-size: 1rem;
+	}
+	.words {
+		text-align: center;
+		padding: 1rem 3rem !important;
+	}
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.features {
+	display: flex;
+	align-items: center;
+	padding: 2rem 0;
+	width: 100%;
+}
+
+.featureImage {
+	height: 200px;
+	width: 200px;
+}
+.side {
+	font-size: 2.5rem;
+	max-width: 500px;
+	text-align: left;
+	animation: appear 1s 1;
+	color: white;
+}
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.explore {
+	color: white;
+	font-size: 1.3rem;
+	text-decoration: none;
+	border: aqua 1px solid;
+	padding: 0.5rem 1rem;
+}
+.explore:hover {
+	text-decoration: none;
+	border: blue 1px solid;
+	color: blue;
+	background-color: white;
+}
+.words > h3 {
+	font-size: 1.7rem;
+}
+.words > p {
+	font-size: 1.2rem;
+}
+.words {
+	text-align: center;
+	padding: 1rem 2rem !important;
+}
+.svg {
+	text-align: center;
+	padding: 1rem 2rem !important;
+}
+.svg > img {
+	text-align: center;
+}
+.icons {
+	display: flex;
+}
+.icons > span {
+	flex: 1;
+}

@@ -1,0 +1,132 @@
+---
+id: videoprops
+title: Video Component
+sidebar_label: Video Props
+slug: /api/video-props
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Image Component. The Reactjs Media documentation.
+keywords:
+    - Image component
+    - reactjs media
+    - reactjs media Component API
+    - reactjs media documentation
+    - Image
+image: https://i.imgur.com/mErPwqL.png
+---
+
+The video player has many props that can be used to impletment logic.
+
+## `src`
+
+-   The `src` prop is a string and it represents the source of the video being played. You should not that it is also a **required** prop so if your dont pass it in the component will throw an **error**.
+
+**Example**
+
+```jsx {4}
+const Video = () => {
+	return <div>
+        <ReactVideo
+        src="/Learn useCallback In 8 Minutes.mp4"
+        poster="/uganda-smoke-flag-isolated-black-background-199119742.jpg"
+    />
+    <div>;
+};
+```
+
+## `poster`
+
+-   The `poster` prop is a string and it represents the poster of the video being played.
+
+**Example**
+
+```jsx {5}
+const Video = () => {
+	return <div>
+        <ReactVideo
+        src="/Learn useCallback In 8 Minutes.mp4"
+        poster="/ASJDXJ.........XS.....42.jpg"
+    />
+    <div>;
+};
+```
+
+## `type`
+
+This represents the type of the video it usally defaults to `video/mp4`. the values expexted is a string.
+
+## `onTimeUpdate`
+
+This props is also passed down in form of a fuction. The function that your pass in will recieve three arguments and these are:
+
+### event
+
+This is a native browser event that is usally triggered each time the video time updates. It is the first argument you will receive
+
+### currentTime
+
+This is a the current time that the video playback has reached.
+
+### duration
+
+This is the full video duration. This is anded in just because we thought it was necessary.
+
+```jsx {10}
+const Video = () => {
+    function onTimeUpdateProp(event, currentTime, duration) {
+        // some logic is place here
+    }
+
+	return <div>
+        <ReactVideo
+        src="/Learn useCallback In 8 Minutes.mp4"
+        ....
+        onTimeUpdate={onTimeUpdateProp}
+    />
+    <div>;
+};
+```
+
+## `primaryColor`
+
+It is used to custiomize the main theme color of the video player
+
+## `onRewind`
+
+This is fired when the user hit the forward button
+
+## `onFoward`
+
+This is fired when the user hit the forward button
+
+## `onSeek`
+
+This is fired when the user seeks a certain point i the video
+
+## `onMute`
+
+This is fired when the volume of the player is muted
+
+## `onRequestPictureInPicture`
+
+This is fired when the Player is playing in [Picture in Picture](https://wicg.github.io/picture-in-picture/)
+
+## `onEnterFullScreen`
+
+This is fired when the video enters FullScreen
+
+## `onPause`
+
+This is fired when the video pauses
+
+## `onPlay`
+
+This is fired when the video plays
+
+## `autoPlay`
+
+This props tells the video that it should play imediately when the page loads
+
+## `className`
+
+This will be the `class` of the video

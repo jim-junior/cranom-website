@@ -1,0 +1,162 @@
+---
+id: imageprops
+title: Image Component
+sidebar_label: Image Props
+slug: /api/image-props
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Image Component. The Reactjs Media documentation.
+keywords:
+    - Image component
+    - reactjs media
+    - reactjs media Component API
+    - reactjs media documentation
+    - Image
+image: https://i.imgur.com/mErPwqL.png
+---
+
+## Image Component Props
+
+```jsx live
+import React from "react";
+import { Image } from "reactjs-media";
+
+const ImageComponent = () => {
+	return (
+		<div>
+			<Image src="/image.png" loading="lazy" alt="LOGO" />
+		</div>
+	);
+};
+export default ImageComponent;
+```
+
+The above example shows usage of the `<Image />` Component:
+
+-   The `src` prop is required, and contains the path to the image you want to embed.
+-   The `alt` prop holds a text description of the image, which isn't mandatory but is incredibly useful for accessibility — screen readers read this description out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or linkrot.
+
+## `type` props
+
+The `type` prop is passed in as the Supported image format a sumarry is placed here below
+
+### Supported image formats
+
+:::tip
+
+This is passed in as the `type` props as a string.
+
+:::
+
+The HTML standard doesn't list what image formats to support, so each [user agent](https://developer.mozilla.org/en-US/docs/Glossary/user_agent) supports different formats. Below is a list of the image formats that are most commonly used on the web.
+
+The image file formats that are most commonly used on the web are listed below.
+
+-   `'image/webp'`
+-   `'image/svg+xml'`
+-   `'image/png'`
+-   `'image/jpeg'`
+-   `'image/gif'`
+-   `'image/avif'`
+-   `'image/apng'`
+
+## `crossorigin`
+
+Indicates if the fetching of the image must be done using a [CORS](https://developer.mozilla.org/en-US/docs/Glossary/CORS) request. Image data from a [CORS-enabled image](https://developer.mozilla.org/en-US/docs/CORS_Enabled_Image) returned from a CORS request can be reused in the `<canvas>` element without being marked "tainted".
+
+If the `crossorigin` prop is not specified, then a non-CORS request is sent (without the Origin request header), and the browser marks the image as tainted and restricts access to its image data, preventing its usage in `<canvas>` elements.
+
+If the `crossorigin` prop is specified, then a CORS request is sent (with the Origin request header); but if the server does not opt into allowing cross-origin access to the image data by the origin site (by not sending any Access-Control-Allow-Origin response header, or by not including the site's origin in any Access-Control-Allow-Origin response header it does send), then the browser marks the image as tainted and restricts access to its image data, preventing its usage in `<canvas>` elements.
+
+Allowed values:
+
+### anonymous
+
+A CORS request is sent with credentials omitted (that is, no [cookies](https://developer.mozilla.org/en-US/docs/Glossary/cookie), [X.509 certificates](https://tools.ietf.org/html/rfc5280), or Authorization request header).
+
+### use-credentials
+
+The CORS request is sent with any credentials included (that is, cookies, X.509 certificates, and the Authorization request header). If the server does not opt into sharing credentials with the origin site (by sending back the Access-Control-Allow-Credentials: true response header), then the browser marks the image as tainted and restricts access to its image data.
+If the attribute has an invalid value, browsers handle it as if the anonymous value was used. See [CORS settings](https://devdocs.io/html/cors_settings_attributes) attributes for additional information.
+
+## `'decoding'`
+
+Provides an image decoding hint to the browser. Allowed values:
+
+### sync
+
+Decode the image synchronously, for atomic presentation with other content.
+
+### async
+
+Default: Decode the image asynchronously, to reduce delay in presenting other content.
+
+### auto
+
+No preference for the decoding mode. The browser decides what is best for the user.
+
+## `'height'`
+
+The intrinsic height of the image, in pixels. Must be an integer without a unit.
+
+## `'loading'`
+
+Indicates how the browser should load the image:
+
+### eager
+
+Loads the image immediately, regardless of whether or not the image is currently within the visible viewport.
+
+### lazy (default value)
+
+Defers loading the image until it reaches a calculated distance from the viewport, as defined by the browser. The intent is to avoid the network and storage bandwidth needed to handle the image until it's reasonably certain that it will be needed. This generally improves the performance of the content in most typical use cases.
+
+> **Note**: Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing images in a page's markup such that a server can track how many images are requested and when.
+
+## `'align'`
+
+:::warning
+This is a depreciated atrributte
+:::
+
+Aligns the image with its surrounding context. Use the float and/or vertical-align CSS properties instead of this attribute. Allowed values:
+
+### top
+
+Equivalent to vertical-align: top or vertical-align: text-top
+
+### middle
+
+Equivalent to vertical-align: -moz-middle-with-baseline
+
+### bottom
+
+The default, equivalent to vertical-align: unset or vertical-align: initial
+
+### left
+
+Equivalent to float: left
+
+### right
+
+Equivalent to float: right
+
+## `'srcset'`
+
+One or more strings separated by commas, indicating possible image sources for the user agent to use. Each string is composed of:
+
+1. A URL to an image
+1. Optionally, whitespace followed by one of:
+
+-   A width descriptor (a positive integer directly followed by w). The width descriptor is divided by the source size given in the sizes attribute to calculate the effective pixel density.
+-   A pixel density descriptor (a positive floating point number directly followed by x).
+
+If no descriptor is specified, the source is assigned the default descriptor of 1x.
+
+It is incorrect to mix width descriptors and pixel density descriptors in the same srcset attribute. Duplicate descriptors (for instance, two sources in the same srcset which are both described with 2x) are also invalid.
+
+The user agent selects any of the available sources at its discretion. This provides them with significant leeway to tailor their selection based on things like user preferences or bandwidth conditions. See our Responsive images tutorial for an example.
+
+## width
+
+The intrinsic width of the image in pixels. Must be an integer without a unit.

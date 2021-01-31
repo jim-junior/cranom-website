@@ -1,0 +1,107 @@
+---
+id: audio
+title: React Audio
+sidebar_label: Audio Player
+slug: /components/audio-player
+hide_title: false
+custom_edit_url: https://github.com/facebook/docusaurus/edit/master/docs/api-doc-markdown.md
+description: React Audio Component. The Reactjs Media documentation.
+    - Raect Audio component
+    - reactjs media
+    - reactjs media docs
+    - reactjs media documentation
+    - reactjs audio player
+image: https://i.imgur.com/mErPwqL.png
+---
+
+## Audio Player
+
+The react audio player is a component for native audio players but it is optimized to look the same in all browsers and have a great UI and is highly customized.
+It consumes both the native browser event DOM api and the react event API making it fast.
+
+## Usage
+
+To use the react audio player component you haveto import it r=from the `reactjs-media` module as `ReactAudio`
+
+**Example**
+
+```jsx
+import React from "react";
+import { ReactAudio } from "reactjs-media";
+
+const MyVideo = () => {
+	return (
+		<>
+			<ReactAudio
+				src="/audio.mp4"
+				poster="/poster.png"
+				//you can pass in other props
+			/>
+		</>
+	);
+};
+```
+
+Your can also import the audio player from another file in the package.
+
+```jsx
+import { ReactAudio } from "reactjs-media/audio";
+```
+
+---
+
+## Component Props
+
+The package also has additional pros that your can pass throug is so that you can carry out some logic. A feww important ones will be listed here you can find the full list in the API section
+
+### `src`
+
+-   The `src` prop is a string and it represents the source of the audio being played. You should not that it is also a **required** prop so if your dont pass it in the component will throw an **error**.
+
+**Example**
+
+```jsx {4}
+const Audio = () => {
+	return <div>
+        <ReactAudio
+        src="/Learn useCallback In 8 Minutes.mp4"
+    />
+    <div>;
+};
+```
+
+### `type`
+
+This represents the type of the video it usally defaults to nothing. the values expexted is a string.
+
+### `onTimeUpdate`
+
+This props is also passed down in form of a fuction. The function that your pass in will recieve three arguments and these are:
+
+-   #### `event`
+
+This is a native browser event that is usally triggered each time the audio time updates. It is the first argument you will receive
+
+-   #### `currentTime`
+
+This is a the current time that the audio playback has reached.
+
+-   #### `duration`
+
+This is the full audio duration. This is anded in just because we thought it was necessary.
+
+```jsx {10}
+const Audio = () => {
+    function onTimeUpdateProp(event, currentTime, duration) {
+        // some logic is place here
+    }
+
+	return <div>
+        <ReactAudio
+        src="/Learn useCallback In 8 Minutes.mp4"
+        ....
+        onTimeUpdate={onTimeUpdateProp}
+    />
+    <div>;
+};
+```
