@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Blurifly',
   tagline: 'Open source projects developed by Blurifly To make coding easy',
-  url: 'https://blurifly.github.io',
+  url: 'https://blurifly-docs.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -99,13 +99,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/jim-junior/blurifly-docs/docs',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/jim-junior/blurifly-docs/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -179,7 +179,7 @@ module.exports = {
             tagName: 'link',
             rel: 'apple-touch-icon',
             sizes:"180x180", 
-            href:"/apple-touch-icon.png" // your PWA manifest
+            href:"/apple-touch-icon.png"
           },
 
         ],
@@ -189,12 +189,11 @@ module.exports = {
       '@docusaurus/plugin-sitemap',
       {
         id: 'next',
-        cacheTime: 600 * 1000, // 600 sec - cache purge period
+        cacheTime: 600 * 1000,
         changefreq: 'weekly',
         priority: 0.5,
         trailingSlash: false,
       },
     ],
-    '@docusaurus/plugin-google-analytics'
   ],
 };
