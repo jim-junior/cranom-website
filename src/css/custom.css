@@ -44,3 +44,10 @@ body {
 *::selection {
 	background-color: aqua;
 }
+html[data-theme="dark"] *::selection {
+	background-color: white;
+	color: black;
+}
+body {
+	bacckground: white;
+}

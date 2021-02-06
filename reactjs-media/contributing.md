@@ -4,7 +4,7 @@ title: Contributing
 sidebar_label: Contributing
 slug: /contributing
 hide_title: true
-custom_edit_url: https://github.com/jim-junior/blurifly-docs/reactjs-media/contributing.md
+custom_edit_url: https://github.com/jim-junior/blurifly-docs/tree/master/reactjs-media/contributing.md
 description: The Reactjs Media documentation. Contributing
 keywords:
     - reactjs-media

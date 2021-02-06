@@ -1,16 +1,16 @@
 module.exports = {
-  title: 'Blurifly',
-  tagline: 'Open source projects developed by Blurifly To make coding easy',
-  url: 'https://blurifly-docs.vercel.app',
+  title: 'Cranom',
+  tagline: 'Open source projects developed by Cranom To make coding easy',
+  url: 'https://cranom.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'favicon.ico',
-  organizationName: 'blurifly', // Usually your GitHub org/user name.
-  projectName: 'blurifly.github.io', // Usually your repo name.
+  organizationName: 'Cranom', // Usually your GitHub org/user name.
+  projectName: 'cranom.github.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Blurify',
+      title: 'Cranom',
       logo: {
         alt: 'Blurifly Logo',
         src: 'img/logo.svg',
@@ -54,7 +54,7 @@ module.exports = {
             },
             {
               label: 'Blurify',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://blurify.ml',
             },
             {
               label: 'Twitter',
@@ -76,7 +76,7 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Beingana Jim Junior. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Cranom INC, Beingana Jim Junior. Built with Docusaurus.`,
     },
     googleAnalytics: {
       trackingID: 'G-FCQBP5VVFJ',
@@ -105,7 +105,7 @@ module.exports = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/jim-junior/blurifly-docs/blog',
+            'https://github.com/jim-junior/blurifly-docs/tree/master',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -149,7 +149,9 @@ module.exports = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: '/android-chrome-512x512.png',
+            type: 'image/png',
+            sizes: "192x192",
+            href: '/android-chrome-192x192.png?v=1.1',
           },
           {
             tagName: 'link',
@@ -159,20 +161,20 @@ module.exports = {
           {
             tagName: 'meta',
             name: 'theme-color',
-            content: 'rgb(37, 194, 160)',
+            content: '#00a6ff',
           },
           {
             tagName: 'meta',
             name: 'msapplication-TileImage',
-            content: '/mstile-144x144.png'
+            content: '/mstile-144x144.png?v=1.1'
           },{
             tagName: 'meta',
             name: 'msapplication-TileColor',
-            content: '#00aba9',
+            content: '#2ddaef',
           },{
             tagName: 'link',
             rel: 'mask-icon',
-            href: '/safari-pinned-tab.svg',
+            href: '/safari-pinned-tab.svg?v=1.1',
             color: "#5bbad5", // your PWA manifest
           },
           {
@@ -181,6 +183,32 @@ module.exports = {
             sizes:"180x180", 
             href:"/apple-touch-icon.png"
           },
+          {
+            tagName: 'link',
+            rel: 'icon',
+            type: "image/png",
+            sizes:"194x194", 
+            href:"/favicon-194x194.png?v=1.1"
+          },
+          {
+            tagName: 'link',
+            rel: 'icon',
+            type: "image/png",
+            sizes:"32x32", 
+            href:"/favicon-32x32.png"
+          },
+          {
+            tagName: 'link',
+            rel: 'icon',
+            type: "image/png",
+            sizes:"16x16", 
+            href:"/favicon-16x16.png"
+          },
+          {
+            tagName: 'link',
+            rel: 'shortcut icon',
+            href:"/favicon.ico?v=1.1"
+          }
 
         ],
       },

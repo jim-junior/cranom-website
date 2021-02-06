@@ -14,7 +14,7 @@ const LayoutC = (prps) => {
             <link rel="shortcut icon" href="/favicon.ico" />
             <meta name="msapplication-TileColor" content="#00aba9" />
             <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
-            <meta name="theme-color" content="#ffffff"></meta>
+            <meta name="theme-color" content="#3578e5"></meta>
         </Head>
     )
 }
