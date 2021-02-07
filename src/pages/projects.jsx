@@ -49,7 +49,7 @@ function Feature({ imageUrl, title, description, github, docs }) {
         <div style={{ margin: 'auto', textAlign: 'center' }} className={clsx('col col--4', styles.feature)}>
             {imgUrl && (
                 <div className="text--center">
-                    <img className={styles.featureImage} src={imgUrl} alt={title} />
+                    <Image className={styles.featureImage} src={imgUrl} alt={title} />
                 </div>
             )}
             <h3>{title}</h3>
