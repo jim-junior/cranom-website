@@ -6,7 +6,6 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import * as icons from 'react-icons/md'
-import { YoutubePlayer, Image } from 'reactjs-media'
 const features = [
     {
         title: 'Reactjs Media',
@@ -18,29 +17,7 @@ const features = [
                 The reactjs media is a react package with awesome HTMLMediaElements that are recreated into react components with a good looking UI and fast UX.
             </>
         ),
-    }/* ,
-    {
-        title: 'Focus on What Matters',
-        imageUrl: 'img/undraw_docusaurus_tree.svg',
-        description: (
-            <>
-                Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-                ahead and move your docs into the
-                <code>docs</code>
-            directory.
-            </>
-        ),
-    },
-    {
-        title: 'Powered by React',
-        imageUrl: 'img/undraw_docusaurus_react.svg',
-        description: (
-            <>
-                Extend or customize your website layout by reusing React. Docusaurus can
-                be extended while reusing the same header and footer.
-            </>
-        ),
-    }, */
+    }
 ];
 
 function Feature({ imageUrl, title, description, github, docs }) {
@@ -49,7 +26,7 @@ function Feature({ imageUrl, title, description, github, docs }) {
         <div style={{ margin: 'auto', textAlign: 'center' }} className={clsx('col col--4', styles.feature)}>
             {imgUrl && (
                 <div className="text--center">
-                    <Image className={styles.featureImage} src={imgUrl} alt={title} />
+                    <img className={styles.featureImage} src={imgUrl} alt={title} />
                 </div>
             )}
             <h3>{title}</h3>

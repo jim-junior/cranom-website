@@ -6,12 +6,13 @@ slug: /components/youtube-player
 hide_title: false
 custom_edit_url: https://github.com/jim-junior/blurifly-docs/tree/master/reactjs-media/youtube.mdx
 description: Youtube Player. The Reactjs Media documentation.
+keywords:
     - Youtube Player
     - reactjs media
     - reactjs media docs
     - reactjs media documentation
-    - reactjs audio player
-image: https://i.imgur.com/mErPwqL.png
+    - reactjs Youtube Player
+image: https://cranom.com/img/reactjs-media.png
 ---
 
 ## Youtube Player
@@ -22,8 +23,7 @@ This is an experimental feature.
 
 :::
 
-The react audio player is a component for native audio players but it is optimized to look the same in all browsers and have a great UI and is highly customized.
-It consumes both the native browser event DOM api and the react event API making it fast.
+This component inserts the Youtube iframe player into your react application
 
 ## Usage
 
@@ -38,7 +38,7 @@ import { YoutubePlayer } from "reactjs-media";
 const MyVideo = () => {
 	return (
 		<>
-			<ReactAudio
+			<YoutubePlayer
 				src="https://youtu.be/UZCO5k1Nu70"
 				width={650}
 				height={600}
@@ -72,6 +72,6 @@ Youtube player is only available in version `1.2.0` above if you want to use it 
 
 :::tip
 
-In version `1.3.x` we plan to improve the youtube player component and add a facebook and other players. If you are willing you can contribute to the projects on [Github](https://guthub.com/jim-junior/reactjs-media "Contribute")
+In version `1.3.x` we plan to improve the youtube player component and add a soundcloud and other players. If you are willing you can contribute to the projects on [Github](https://guthub.com/jim-junior/reactjs-media "Contribute")
 
 :::

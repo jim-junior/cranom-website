@@ -1,0 +1,60 @@
+---
+id: facebookplayerprops
+title: Facebook Player Props
+sidebar_label: Facebook Player
+slug: /api/facebook
+hide_table_of_contents: false
+custom_edit_url: https://github.com/jim-junior/blurifly-docs/tree/master/reactjs-media/installation.mdx
+description: The Reactjs Media documentation Installation
+keywords:
+    - reactjs-media
+    - reactjs media Installation
+    - reactjs media docs
+    - reactjs media documentation
+    - reactjs video player
+image: https://cranom.com/img/reactjs-media.png
+---
+
+The facebook player component props are derived directly from the facebook dovumentaion and they are few.
+
+## Example
+
+```jsx
+import React from "react";
+import { FacebookPlayer } from "reactjs-media";
+
+const MyVideo = () => {
+	return (
+		<>
+			<FacebookPlayer
+				src="https://www.facebook.com/facebook/videos/10153231379946729/"
+				width={650}
+				height={600}
+			/>
+		</>
+	);
+};
+```
+
+## Output
+
+import { FacebookPlayer } from "reactjs-media";
+
+<FacebookPlayer
+	src="https://www.facebook.com/facebook/videos/10153231379946729/"
+	width={650}
+	height={600}
+/>
+---
+
+## Props
+
+| props               | description                                                                                                                                                                                                                                                       | default value |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `src`: **Required** | The absolute URL of the video.                                                                                                                                                                                                                                    | `null`        |
+| `allowFullScreen`   | Allow the video to be played in fullscreen mode. Can be false or true.                                                                                                                                                                                            | `false`       |
+| `autoPlay`          | Automatically start playing the video when the page loads. The video will be played without sound (muted). People can turn on sound via the video player controls. This setting does not apply to mobile devices. Can be false or true.                           | `false`       |
+| `width`             | The width of the video container. Minimum `220`.                                                                                                                                                                                                                  | `'auto'`      |
+| `lazy`              | true means use the browser's lazy-loading mechanism by setting the `loading="lazy"` iframe attribute. The effect is that the browser does not render the plugin if it's not close to the viewport and might never be seen. Can be one of true or false (default). | `false`       |
+| `showText`          | Set to true to include the text from the Facebook post associated with the video, if any. Only available for desktop sites.                                                                                                                                       | `false`       |
+| `captions`          | Set to true to show captions (if available) by default. Captions are only available on desktop.                                                                                                                                                                   | `true`        |

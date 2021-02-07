@@ -1,0 +1,51 @@
+---
+id: facebook
+title: Facebook Player
+sidebar_label: Facebook Player
+slug: /components/facebook-player
+hide_title: false
+custom_edit_url: https://github.com/jim-junior/blurifly-docs/tree/master/reactjs-media/facebook.mdx
+description: Youtube Player. The Reactjs Media documentation.
+keywords:
+    - Facebook Player
+    - reactjs media
+    - reactjs media Facebook Player
+    - reactjs media Facebook Player documantation
+    - reactjs media documentation
+    - reactjs Facebook Playerhttps://cranom.com/img/reactjs-media.png
+image: https://i.imgur.com/mErPwqL.png
+---
+
+## Facebook Player
+
+The Facebook player component is used to play facebook videos directly on your website using the facebook player API.
+
+## Usage
+
+To use the react Facebook player component you have to import it from the `reactjs-media` module as `FacebookPlayer`
+
+## Example
+
+```jsx
+import React from "react";
+import { FacebookPlayer } from "reactjs-media";
+
+const MyVideo = () => {
+	return (
+		<>
+			<FacebookPlayer
+				src="https://www.facebook.com/facebook/videos/10153231379946729/"
+				width={650}
+				height={600}
+			/>
+		</>
+	);
+};
+```
+
+
+:::tip
+
+You dont have to load the Facebook SDK into your `index.html` file. the player will load the script immediately after it mounts to the DOM.
+
+:::
