@@ -18,17 +18,13 @@ image: https://cranom.com/img/reactjs-media.png
 ## Image Component Props
 
 ```jsx live
-import React from "react";
-import { Image } from "reactjs-media";
-
-const ImageComponent = () => {
+function ImageComponent() {
 	return (
 		<div>
-			<Image src="/image.png" loading="lazy" alt="LOGO" />
+			<Image src="/img/reactjs-media.png" loading="lazy" alt="LOGO" />
 		</div>
 	);
-};
-export default ImageComponent;
+}
 ```
 
 The above example shows usage of the `<Image />` Component:

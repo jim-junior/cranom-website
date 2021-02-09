@@ -26,8 +26,9 @@ html[data-theme="dark"] {
 	--ifm-color-primary-lighter: #15fdfd;
 	--ifm-color-primary-lightest: #38fdfd;
 }
-body {
+html[data-theme="light"] body {
 	font-family: "Roboto", sans-serif;
+	background-color: whitesmoke;
 }
 .menu_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar- {
 	scrollbar-width: thin;

@@ -68,6 +68,29 @@ export const Video = () => (
 
 ---
 
+```jsx live
+function Clock(props) {
+	const [date, setDate] = useState(new Date());
+	useEffect(() => {
+		var timerID = setInterval(() => tick(), 1000);
+
+		return function cleanup() {
+			clearInterval(timerID);
+		};
+	});
+
+	function tick() {
+		setDate(new Date());
+	}
+
+	return (
+		<div>
+			<h2>It is {date.toLocaleTimeString()}.</h2>
+		</div>
+	);
+}
+```
+
 ## Component Props
 
 The package also has additional pros that your can pass throug is so that you can carry out some logic. A feww important ones will be listed here you can find the full list in the [API section](videoprop.mdx)

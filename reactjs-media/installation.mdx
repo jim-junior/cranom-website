@@ -20,17 +20,32 @@ image: https://cranom.com/img/reactjs-media.png
 
 To install `reactjs-media` you need to run this command in the terminal
 
-### yarn
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+  defaultValue="npm"
+  values={[
+    { label: 'npm', value: 'npm', },
+    { label: 'yarn', value: 'yarn', },
+  ]
+}>
+<TabItem value="npm">
+
+```bash
+npm install reactjs-media
+```
+
+</TabItem>
+<TabItem value="yarn">
 
 ```bash
 yarn add reactjs-media
 ```
 
-### npm
+</TabItem>
 
-```bash
-npm install reactjs-media
-```
+</Tabs>
 
 :::warning
 
@@ -45,3 +60,5 @@ Inoder to install the latest version of any package from npm add the `@latest` t
 ```bash
 npm install reactjs-media@latest
 ```
+
+<!-- npm run swizzle @docusaurus/theme-live-codeblock ReactLiveScope -->

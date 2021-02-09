@@ -113,7 +113,7 @@ module.exports = {
       },
     ],
   ],
-
+  themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
     [
       '@docusaurus/plugin-content-docs',
