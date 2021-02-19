@@ -1,0 +1,209 @@
+---
+slug: how-to-create-a-video-player-in-react
+title: How to create a responsive video player in React
+author: Beingana Jim Junior
+author_title: Front end Devoloper
+author_url: https://github.com/jim-junior
+author_image_url: /img/26232122_575464682791788_937194064396236177_o.jpg
+tags: [react, video-player, reactjs-media]
+description: How to create a responsive video player in React
+keywords:
+    - responsive video player
+    - react video
+    - react video player
+    - react audio player
+    - react video player
+    - reactjs media Component
+    - reactjs media documentation
+    - Image
+image: https://cranom.com/img/reactjs-media.png
+---
+
+Most famous websites usually have there own custom video players such as Youtube, Facebook etc. So some times you as a web developer you want to embed a video in your website but find it hard to create one with an amazing UI. Today I will show you how to have an amazing Video and Audio player in React.
+
+<!--truncate-->
+
+Since the default HTML5 video player usually looks different in different browsers you definetely want to avoid using it and you definetely dont want to create one from scratch so the best idea is to use a package.
+
+We shall be using ReactJS Media for this tutorial. The reason is because it has a great documentation and its HTML5 player has a great UI compared to other famous libraries like react player. So lets start
+
+## Installation
+
+You can install it with any of your favourite package manager here we shall demostrate `npm` and `yarn` so go to your terminal and type the following command.
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs
+    defaultValue="npm"
+    values={[
+        { label: 'npm', value: 'npm', },
+        { label: 'yarn', value: 'yarn', },
+    ]
+}>
+<TabItem value="npm">
+
+```bash
+npm install reactjs-media
+```
+
+</TabItem>
+<TabItem value="yarn">
+
+```bash
+yarn add reactjs-media
+```
+
+</TabItem>
+
+</Tabs>
+
+Now that you have installed it your can now use it.
+
+## Components
+
+To use it you will have to import the the component you want from `reactjs-media`. The list of components are:
+
+-   `ReactVideo` for a native video player.
+-   `ReactAudio` for an audio player.
+-   `FacebookPlayer` for a Facebook player(For videos from facebook ).
+-   `Image` for responsive and optimized images.
+-   `YoutubePlayer` for a youtube player.
+
+:::tip
+Incase the more players are added i will update this page. This is because more players are added every time.
+:::
+
+## Usage
+
+Now let me demonstrate how to use each of those components.
+
+### Video Player
+
+This is the native video player but it is enhanced and given a great UI. You have to import it from the library and pass in props. It can be used for normal video files supported by the browsers.
+
+#### Example
+
+```jsx
+import React from "react";
+import { ReactVideo } from "reactjs-media";
+
+const App = () => {
+	return (
+		<div>
+			<ReactVideo
+				src="https://www.example.com/url_to_video.mp4"
+				poster="https://www.example.com/poster.png"
+				primaryColor="red"
+				// other props
+			/>
+		</div>
+	);
+};
+
+export default App;
+```
+
+This will create a player that is similar to one like this
+
+import { ReactVideo } from "reactjs-media";
+
+<ReactVideo
+	src="https://storage.coverr.co/videos/BALBxhjqfldnwtv00YopEAA014UtVoZo00R?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHBJZCI6Ijg3NjdFMzIzRjlGQzEzN0E4QTAyIiwiaWF0IjoxNjEyNzMxODg4fQ.IQN2HsDRTBEo0XLysiken70iu4vJ-GerSv2zxUGtPws"
+	poster="/uganda-smoke-flag-isolated-black-background-199119742.jpg"
+	type="video/mp4"
+/>
+
+It has more `props`and they can be found in the [Official documentation](/reactjs-media/api/video-props)
+
+### Audio Player
+
+The audio player is used for audio files and it can be used like this.
+
+```jsx
+import React from "react";
+import { ReactAudio } from "reactjs-media";
+
+const MyVideo = () => {
+	return (
+		<>
+			<ReactAudio
+				src="/audio.mp4"
+				poster="/poster.png"
+				//you can pass in other props
+			/>
+		</>
+	);
+};
+```
+
+Your can also import the audio player from another file in the package.
+
+```jsx
+import { ReactAudio } from "reactjs-media/audio";
+```
+
+## Youtube Player
+
+Using the it is easy all you have to do is add the video url.
+
+**Example**
+
+```jsx {5}
+const App = () => {
+	return (
+		<div>
+			<YoutubePlayer
+				src="https://youtu.be/UZCO5k1Nu70" // Reqiured
+				width={650}
+				height={600}
+			/>
+		</div>
+	);
+};
+```
+
+import { YoutubePlayer } from "reactjs-media";
+<YoutubePlayer
+	src="https://youtu.be/UZCO5k1Nu70"
+	allowFullScreen
+	height={500}
+	width={600}
+/>;
+
+it also hase other props so check them out in the [documentation](/reactjs-media/api/youtube-player-props).
+
+## Facebook Player
+
+This is used to play videos from facebook.
+
+### Example
+
+```jsx
+import React from "react";
+import { FacebookPlayer } from "reactjs-media";
+
+const MyVideo = () => {
+	return (
+		<>
+			<FacebookPlayer
+				src="https://www.facebook.com/facebook/videos/10153231379946729/"
+				width={650}
+				height={600}
+			/>
+		</>
+	);
+};
+```
+
+import { FacebookPlayer } from "reactjs-media";
+
+<FacebookPlayer
+	src="https://www.facebook.com/facebook/videos/10153231379946729/"
+	width={650}
+	height={600}
+/>
+
+## Conclusion
+
+To me i think this is the best package out there that you can use if you want to create a vidoe player although their might be others that are better that it but as i know when it comes to a native videoplayer this is the best i have seen since it also includes an audio component

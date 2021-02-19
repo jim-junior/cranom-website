@@ -6,7 +6,8 @@
  */
 
 /* You can override the default Infima variables here. */
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons");
 :root {
 	--ifm-color-primary: #3578e5;
 	--ifm-color-primary-dark: #1d68e1;
@@ -27,7 +28,9 @@ html[data-theme="dark"] {
 	--ifm-color-primary-lightest: #38fdfd;
 }
 html[data-theme="light"] body {
-	font-family: "Roboto", sans-serif;
+	font-family: Roboto, Noto Sans, Noto Sans JP, Noto Sans KR,
+		Noto Naskh Arabic, Noto Sans Thai, Noto Sans Hebrew, Noto Sans Bengali,
+		sans-serif;
 	background-color: whitesmoke;
 }
 .menu_node_modules-\@docusaurus-theme-classic-lib-next-theme-DocSidebar- {

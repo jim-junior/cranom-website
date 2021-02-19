@@ -14,6 +14,7 @@
 }
 
 .cover {
+	background-color: #fffefe;
 	border-radius: 3px;
 	box-shadow: #0000005d 1px 1px 2px, #0000005d -1px -1px 2px;
 	padding: 1rem;
@@ -22,7 +23,7 @@
 	color: #808080;
 }
 .md {
-	font-size: 1.2rem;
+	font-size: 1rem;
 }
 .tags {
 	background: #d3d3d3;
@@ -38,4 +39,7 @@ html[data-theme="dark"] .tags {
 	padding: 0.3rem;
 	border-radius: 3px;
 	color: rgb(151, 151, 151);
+}
+html[data-theme="dark"] .cover {
+	background-color: #1f1f1f;
 }

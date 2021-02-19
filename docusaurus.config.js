@@ -6,11 +6,11 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'favicon.ico',
-  organizationName: 'Cranom', // Usually your GitHub org/user name.
-  projectName: 'cranom.github.io', // Usually your repo name.
+  organizationName: 'Cranom', 
+  projectName: 'cranom.github.io', 
   themeConfig: {
     navbar: {
-      title: 'Cranom',
+      title: 'CRANOM',
       logo: {
         alt: 'Blurifly Logo',
         src: 'img/logo.svg',
@@ -18,12 +18,12 @@ module.exports = {
       items: [
         {
           to: 'projects/',
-          label: 'Projects',
+          label: 'PROJECTS',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        {to: 'blog', label: 'BLOG', position: 'left'},
         {
-          href: 'https://github.com/blurifly',
+          href: 'https://github.com/cranom',
           label: 'GitHub',
           position: 'right',
         },
