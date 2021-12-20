@@ -27,12 +27,12 @@ To use the react video player component you haveto import it r=from the `reactjs
 
 ```jsx
 import React from "react";
-import { ReactVideo } from "reactjs-media";
+import { Video } from "reactjs-media";
 
 const MyVideo = () => {
 	return (
 		<>
-			<ReactVideo
+			<Video
 				src="/video.mp4"
 				poster="/poster.png"
 				//you can pass in other props
@@ -45,7 +45,7 @@ const MyVideo = () => {
 Your can also import the video player from another file in the package.
 
 ```jsx
-import { ReactVideo } from "reactjs-media/video";
+import { Video } from "reactjs-media/video";
 ```
 
 ## customization
@@ -53,11 +53,11 @@ import { ReactVideo } from "reactjs-media/video";
 To custiomize the main theme color of the video player you have to pass in a prop named `primaryColor`
 
 ```jsx
-import { ReactVideo } from "reactjs-media";
+import { Video } from "reactjs-media";
 
 export const Video = () => (
 	<div>
-		<ReactVideo
+		<Video
 			src="/Learn useCallback In 8 Minutes.mp4"
 			poster="/uganda-smoke-flag-isolated-black-background-199119742.jpg"
 			primaryColor="red"
@@ -67,29 +67,6 @@ export const Video = () => (
 ```
 
 ---
-
-```jsx live
-function Clock(props) {
-	const [date, setDate] = useState(new Date());
-	useEffect(() => {
-		var timerID = setInterval(() => tick(), 1000);
-
-		return function cleanup() {
-			clearInterval(timerID);
-		};
-	});
-
-	function tick() {
-		setDate(new Date());
-	}
-
-	return (
-		<div>
-			<h2>It is {date.toLocaleTimeString()}.</h2>
-		</div>
-	);
-}
-```
 
 ## Component Props
 
@@ -102,9 +79,9 @@ The package also has additional pros that your can pass throug is so that you ca
 **Example**
 
 ```jsx {4}
-const Video = () => {
+const MyVideo = () => {
 	return <div>
-        <ReactVideo
+        <Video
         src="/Learn useCallback In 8 Minutes.mp4"
         poster="/uganda-smoke-flag-isolated-black-background-199119742.jpg"
     />
@@ -119,9 +96,9 @@ const Video = () => {
 **Example**
 
 ```jsx {5}
-const Video = () => {
+const MyVideo = () => {
 	return <div>
-        <ReactVideo
+        <Video
         src="/Learn useCallback In 8 Minutes.mp4"
         poster="/ASJDXJ.........XS.....42.jpg"
     />
@@ -150,13 +127,13 @@ This is a the current time that the video playback has reached.
 This is the full video duration. This is anded in just because we thought it was necessary.
 
 ```jsx {10}
-const Video = () => {
+const MyVideo = () => {
     function onTimeUpdateProp(event, currentTime, duration) {
         // some logic is place here
     }
 
 	return <div>
-        <ReactVideo
+        <Video
         src="/Learn useCallback In 8 Minutes.mp4"
         ....
         onTimeUpdate={onTimeUpdateProp}
